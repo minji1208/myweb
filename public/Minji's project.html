@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FUNCTION</title>
+	<style>
+		body { background-color: black; color: mistyrose;
+		margin-left: 40px; margin-right: 40px; }
+	</style>
+</head>
+<body>
+	<h1>함수(Function)에 대해 알아보자</h1>
+	<hr>
+	<h3>함수란?</h3>
+	<p>
+		어떤 문제를 처리하기 위한 방법을 소스 코드로 묶어놓고 필요(호출)에 따라 동작하는 기능이다<br><h3>함수의 특징</h3> 
+		<ul>
+			<li>기본적으로 코드 재사용을 위해 존재한다.</li>
+			<li>읽기 쉬운 코드를 만들기 위해 만들어지기도 한다.</li>
+			<li>함수도 하나의 표현식으로서 변수에 할당될 수 있다.</li>
+		</ul>
+		<h3>함수의 종류</h3>
+		<ul>
+			<li>선언적 함수</li>
+			<li>익명 함수(표현식)</li>
+			<li>화살표 함수(ES6)</li>
+		</ul>
+		<h4>선언적 함수 VS 익명 함수</h4>
+		<ul>
+			<li>함수 이름의 유무
+				<ul>
+					<li>디버깅 등 스택 추적을 할 때 함수 이름이 표시되면 더 유용함</li>
+				</ul>
+			<li>생성 방식의 차이
+				<ul>
+					<li>함수 선언 방식은 호스팅이 적용됨</li>
+					<li>익명 함수를 변수에 할당하는 방식은 런타임에 해당 코드가 실행될 때 평가됨</li>
+				</ul>
+		</ul>
+		<h4>익명 함수 VS 화살표 함수</h4>
+		<ul>
+			<li>this의 차이
+				<ul>
+					<li>익명 함수에서 this는 함수의 호출자</li>
+					<li>화살표 함수에는 this가 없어서 자신을 둘러싼 가까운 범위의 this를 사용함</li>
+				</ul>
+		</ul>
+		<h3>콜백(Callback) 함수</h3>
+		함수 호출 시 함수의 매개변수로 전달하는 함수이다. 즉, 호출 된 함수 안에서 콜백 함수를 실행할 수 있다.
+		<h4>콜백은 
+			<ul>
+				<li>비동기 작업의 완료 시점 대응
+					<ul>
+						<li>예) 웹에서 이미지를 다운로드해서 로컬 파일로 저장하는 함수</li>
+						<li>예) 일정 시간 지나서 실행시키는 함수</li>
+					</ul>
+				<li>단점 : Callback Hell(콜백 안에 콜백이 계속 중첩되는 형태)
+					<ul>
+						<li>피하려면 각각의 콜백을 익명 함수보다는 선언적 함수로 바꿔서 가독성을 높여주자</li>
+						<li>ES6이후에는 Promise 또는 async/await 기능을 적극 활용하자</li>
+					</ul>
+			</ul></h4>
+		<h3>표준 내장 함수(숫자 변환)</h3>
+		<ul>
+			<li>문자열을 정수나 실수로 변환 : parseInt(), parseFloat()</li>
+			<li>되도록 현재 자바스크립트에서는 Number()를 사용하자</li>
+		</ul>
+		<h3>표준 내장 함수(타이머)</h3>
+		<ul>
+			<li>setTimeout(함수, 시간)
+				<ul>
+					<li>특정 시간 후에 함수를 실행한다.</li>
+					<li>setTimeout의 리턴 값을 매개변수로 받는 clearTimeout으로 타이머를 종료시킬 수 있다.</li>
+				</ul>
+			<li>setInterval(함수, 시간)
+				<ul>
+					<li>특정 시간마다 함수를 실행한다.</li>
+					<li>setInterval의 리턴 값을 매개변수로 받는 clearInterval로 타이머를 종료시킬 수 있다.</li>
+				</ul>
+			<li>두 함수 모두 시간의 단위는 밀리초(ms)이다.</li>
+			<li>두 함수 모두 리턴 값은 엔진 종류에 따라 차이가 있으나 사용법은 유사하다.
+				<ul>
+					<li>브라우저에서의 리턴값 : 숫자형 Timeout ID</li>
+					<li>NodeJS에서의 리턴값 : Timeout 객체</li>
+				</ul>
+		</ul>
+
+	 </p>
+</body>
+</html>

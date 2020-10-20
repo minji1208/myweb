@@ -1,15 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {Button, Progress} from 'semantic-ui-react'
+import { Image,Header, Divider, Icon, Input, Menu} from 'semantic-ui-react'
+
+
+import t1 from "./T1.jpg"
+
 
 function App() {
   return (
-    <div>
-    <p>안녕하세요</p>
-    <Button primary> 함수의 정의 </Button>
-    <Progress percent = {66} indicating/>
-    </div>
+    <div style = {{backgroundColor : "black"}}>
+    <Icon name="mouse pointer" style={{color : "mistyrose"}}/>
+    <h1 style = {{color:"mistyrose", textAlign:"center"}}> 민지'S HOME </h1>
+    <Menu inverted widths={3}>
+        <Menu.Item
+          name='HOME'
+          onClick={() => window.open("MJ.html","_self")}
+        />
+        <Menu.Item
+          name='FUNCTION'
+          onClick={() => window.open("Minji's project.html","_self")}
+        />
+        <Menu.Item
+          name='OBJECT'
+          onClick={() => window.open("객체.html","_self")}
+        />
+        <Menu.Item
+          name='REPORT'
+          onClick={() => window.open("report.html","_self")}
+        />
+      </Menu>
+    <Divider horizontal >
+    </Divider>
+    <Image src = {t1} centered />
+
+</div>
   );
 }
 
